@@ -1,0 +1,123 @@
+
+
+
+
+
+Zero_Cool_1.0.0
+
+
+
+Zero_Cool_db
+
+
+
+
+
+
+
+
+php artisan make:model Transaction -mcr
+
+
+php artisan make:model Auth -cr
+
+
+Install Auth
+Install Passport
+
+
+
+
+https://github.com/barryvdh/laravel-debugbar
+
+
+
+
+beta.build
+
+
+beta_platform
+
+
+npm install
+
+// Run all Mix tasks...
+npm run dev
+
+// Run all Mix tasks and minify output...
+npm run production
+
+npm run watch
+
+
+php artisan passport:install --force
+php artisan config:cache
+php artisan migrate
+npm run dev
+
+
+
+composer update
+
+
+https://bootstrap-vue.js.org/docs/components/pagination/
+
+laravel new alpha.ico.platform.vuex
+
+
+Setting up build 
+
+Install Passport
+install Auth
+Migrate
+
+
+
+
+
+Frontpage template
+- connect to blockchain
+- Get ico stats
+- Get current crypto stats
+- White list form - Collection of emails to invite to ico on go live
+
+
+DONE / Make dynamic - Timer component
+- Progress componant (Slider) (Goals setup)
+
+
+
+
+
+DONE / Add google - Basic Registration
+DONE / Add google - Basic Signin
+
+
+Basic User Profile update
+
+
+
+Contribute / Buy Tokens Template
+Transactions Form
+Transaction History
+
+
+
+
+
+
+cookies
+
+https://www.npmjs.com/package/vue-cookies
+
+
+
+
+
+
+php artisan make:model Auth -mcr
+php artisan make:model Transaction -mcr
+
+
+
+php artisan make:model Export -mcr
