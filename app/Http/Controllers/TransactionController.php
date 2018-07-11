@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use App\Transaction;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class TransactionController extends Controller
 {
@@ -21,8 +20,9 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $allTransactions = Transaction::latest()->where('user_id', auth()->id())->get();
-        return response()->json($allTransactions);
+        // $allTransactions = Transaction::latest()->where('user_id', auth()->id())->get();
+        // return response()->json($allTransactions);
+        return Transaction::all(); // Temp display all transaction - No Auth
     }
 
     /**
@@ -43,8 +43,7 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $validatedTransactionData = $request->validate([
+        $this->validate($request, [
             'title' => 'required',
             'currency' => 'required|max:144',
             'amount_deposited' => 'required|numeric|max:144',
@@ -53,8 +52,9 @@ class TransactionController extends Controller
             'notes' => 'required|max:255', // Update function
             'user_id' => 'required|max:144'
         ]);
-        $transaction = Transaction::create($validatedTransactionData);
-        return response()->json($transaction);
+        $transaction = Transaction::create($request->all());
+        $transaction->user_id = $request->user()->id;
+        return response()->json($transaction, 201);
     }
 
     /**
