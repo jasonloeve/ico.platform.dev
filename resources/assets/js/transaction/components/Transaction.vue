@@ -21,12 +21,6 @@
 	</div>
 </template>
 
-
-
-
-
-
-
 <script>
 	import { mapState, mapActions } from 'vuex';
 	import Flash from '../../components/Flash';
